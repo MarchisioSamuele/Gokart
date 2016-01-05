@@ -9,7 +9,7 @@ public class Percorso {
     protected Vector<Tratto> tratti;
 
     /**
-     * costruttore
+     * metodo costruttore
      */
     public Percorso(){
         this.tratti = new Vector<>();
