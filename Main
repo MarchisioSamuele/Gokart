@@ -11,9 +11,9 @@ public class Main {
 
         Gokart gokart = new Gokart();
         while (gokart.isOk()){
-            int da = gokart.getTrattiPercorsi();
+            int da = gokart.getTrattiPercorsi() % percorso.tratti.size();
             int spostamento = gokart.move();
-            int a = (da + spostamento)% percorso.tratti.size();
+            int a = (da + spostamento) % percorso.tratti.size();
             int dmg = percorso.danno(da, a);
             gokart.danneggia(dmg);
             System.out.println(spostamento + " " + gokart);
