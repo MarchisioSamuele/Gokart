@@ -9,6 +9,7 @@ public class Gokart {
     private  int carrozzeria = 0;
     private  int maxVelocita = 0;
     private  int trattiPercorsi = 0;
+    private  int giri = 0;
     private  int id = 0;
     private  static int lastId = 0;
     private Random random;
@@ -47,18 +48,27 @@ public class Gokart {
     }
 
     /**
-     * @return i tratti percorsi
-     */
-    public int getTrattiPercorsi(){
-        return this.trattiPercorsi;
-    }
-
-    /**
      * sottrae alla carrozzeria il danno subito durante i tratti percorsi
      * @param dmg il danno subito
      */
     public void danneggia(int dmg){
         this.carrozzeria -= dmg;
+    }
+
+    public int getTrattiPercorsi(){
+        return this.trattiPercorsi;
+    }
+    
+    public void setGiri(int giri){
+        this.giri = giri;
+    }
+    
+    public int getGiri(){
+        return this.giri;
+    }
+    
+    public int getId(){
+        return this.id;
     }
 
     /**
@@ -70,7 +80,7 @@ public class Gokart {
             + this.trattiPercorsi +
             " stato carrozzeria: "
             + this.carrozzeria);
-
+            
         return ret;
     }
 }
