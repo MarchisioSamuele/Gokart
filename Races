@@ -3,6 +3,34 @@ package pkgGokart;
 /**
  * contiene le varie tipologie di gare
  */
-public class Races {
+public class Races{
+    
+    /**
+    * metodo costruttore
+    */
+    public void Race{
+        Percorso percorso = new Percorso();
+        for(int i = 0; i < 100; i++)
+            percorso.add(new Tratto(i));
 
+        Gokart gokart = new Gokart();
+    }
+    
+    /**
+    * fa correre il cart fino a che la carrozzeria non è completamente
+    * distrutta e salva i giri fatti
+    * @param da è l'indice del tratto di partenza
+    * @param a è l'indice del tratto di arrivo
+    * @dmg è il danno subito nel percorso
+    */
+    public void corsa(Gokart gokart){
+        while (gokart.isOk()){
+            int da = gokart.getTrattiPercorsi() % percorso.tratti.size();
+            int spostamento = gokart.move();
+            int a = (da + spostamento) % percorso.tratti.size();
+            int dmg = percorso.danno(da, a);
+            gokart.danneggia(dmg);
+        }
+        gokart.setGiri(gokart.getTrattiPercorsi() / percorso.tratti.size());
+    }
 }
