@@ -32,14 +32,18 @@ public class Gokart {
      * @return vero se il kart può proseguire la gara, false altrimenti
      */
     public boolean isOk(){
-        return (this.carrozzeria != 0);
+        return (this.carrozzeria > 0);
     }
 
     /**
-     * @return la distanza percorsa
-     */
+    * calcola la distanza percorsa e aggiunge il valore ai tratti percorsi
+    * @param distance la distanza percorsa generata casualmente
+    * @return la distanza percorsa
+    */
     public int move(){
-        return random.nextInt(maxVelocita);
+        int distance = random.nextInt(maxVelocita);
+        trattiPercorsi += distance;
+        return distance;
     }
 
     /**
