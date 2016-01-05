@@ -1,0 +1,8 @@
+package pkgGokart;
+
+/**
+ * contiene le varie tipologie di gare
+ */
+public class Races {
+
+}
