@@ -20,14 +20,14 @@ public class Main {
         }
         
         //fa eseguire la corsa ad ogni kart e salva il numero dei migliori
-        for(i = 0; i < partecipanti.size(); i++){
-            race.corsa(partecipanti.get(i));
-            giri = partecipanti.get(i).getGiri();
+        for(i = 0; i < partecipanti.partecipanti.size(); i++){
+            race.corsa(partecipanti.partecipanti.get(i));
+            giri = partecipanti.partecipanti.get(i).getGiri();
             if(giri == giriMax){
                 vincitori.add(partecipanti.get(i).getId());
             }else if(giri > giriMax){
                 vincitori.clear();
-                vincitori.add(partecipanti.get(i).getId());
+                vincitori.add(partecipanti.partecipanti.get(i).getId());
                 giriMax = giri;
             }
         }
