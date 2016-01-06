@@ -8,9 +8,9 @@ public class Races{
     /**
     * metodo costruttore
     */
-    public void Race{
+    public void Race(int lenght){
         Percorso percorso = new Percorso();
-        for(int i = 0; i < 100; i++)
+        for(int i = 0; i < lenght; i++)
             percorso.add(new Tratto(i));
 
         Gokart gokart = new Gokart();
