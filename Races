@@ -4,12 +4,13 @@ package pkgGokart;
  * contiene le varie tipologie di gare
  */
 public class Races{
+    Percorso percorso;
     
     /**
     * metodo costruttore
     */
-    public void Races(){
-        
+    public Races(int lenght, int maxPericolosita){
+        percorso = new Percorso(int lenght, int maxPericolosita);
     }
     
     /**
