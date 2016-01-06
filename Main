@@ -6,7 +6,7 @@ import java.util.Vector;
  */
 public class Main {
     public static void main(String[] args){
-        Races race = new Races();
+        Races race = new Races(10);
         Partecipanti partecipanti = new Partecipanti();
         Vector vincitori<int> = new Vector;
         int i = 0;
