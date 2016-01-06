@@ -8,7 +8,7 @@ public class Races{
     /**
     * metodo costruttore
     */
-    public void Race(int lenght){
+    public void Races(int lenght){
         Percorso percorso = new Percorso();
         for(int i = 0; i < lenght; i++)
             percorso.add(new Tratto(i));
