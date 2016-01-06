@@ -5,7 +5,7 @@ import java.util.Vector;
 /**
  * E' una collezione di Tratto
  */
-public class Percorso(){
+public class Percorso{
     protected Vector<Tratto> tratti;
 
     /**
