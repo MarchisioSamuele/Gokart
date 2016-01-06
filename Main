@@ -3,16 +3,21 @@ package pkgGokart;
 import java.util.Vector;
 /**
  * Created by Sassu on 17/12/2015.
+ * ricevendo da tastiera il numero di partecipanti, la lunghezza del circuito
+ * e la pericolosità massima, genera una gara in cui ogni kart corre e restituisce in output,
+ * come vincitori il o i kart che han compito più giri.
  */
 public class Main {
     public static void main(String[] args){
-        Percorso percorso = new Percorso(10, 5);
+        int lunghezzaPercorso = 10;
+        int maxPericolosita = 5;
+        int nPartecipanti = 1;
+        Races race = new Races(lunghezzaPercorso, maxPericolosita);
         Partecipanti partecipanti = new Partecipanti();
-        Vector vincitori<int> = new Vector;
+        Vector<integer> vincitori = new Vector();
         int i = 0;
         int giri = 0;
         int giriMax = 0;
-        int nPartecipanti = 1;
         
         //aggiunge i partecipanti
         for(i = 0; i < nPartecipanti; i++){
@@ -24,7 +29,7 @@ public class Main {
             race.corsa(partecipanti.partecipanti.get(i));
             giri = partecipanti.partecipanti.get(i).getGiri();
             if(giri == giriMax){
-                vincitori.add(partecipanti.get(i).getId());
+                vincitori.add(partecipanti.partecipanti.get(i).getId());
             }else if(giri > giriMax){
                 vincitori.clear();
                 vincitori.add(partecipanti.partecipanti.get(i).getId());
