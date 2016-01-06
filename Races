@@ -10,7 +10,7 @@ public class Races{
     * metodo costruttore
     */
     public Races(int lenght, int maxPericolosita){
-        percorso = new Percorso(int lenght, int maxPericolosita);
+        percorso = new Percorso(lenght, maxPericolosita);
     }
     
     /**
