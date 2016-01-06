@@ -14,7 +14,7 @@ public class Main {
         int nPartecipanti = 1;
         Races race = new Races(lunghezzaPercorso, maxPericolosita);
         Partecipanti partecipanti = new Partecipanti();
-        Vector<integer> vincitori = new Vector();
+        Vector<Integer> vincitori = new Vector();
         int i = 0;
         int giri = 0;
         int giriMax = 0;
